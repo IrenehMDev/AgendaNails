@@ -9,6 +9,11 @@ class AppointmentType extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "description",
+        "name"
+    ];
+
     public function appointments()
     {
         return $this->hasMany(Appointment::class);

@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
     {
         Schema::disableForeignKeyConstraints();
         $this->call(AppointmentTypeSeeder::class);
+        $this->call(RoleSeeder::class);
+        $this->call(ActionSeeder::class);
+        $this->call(ActionRoleSeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }
