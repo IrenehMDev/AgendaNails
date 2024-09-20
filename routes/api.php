@@ -3,6 +3,7 @@
 use App\Http\Controllers\Appointment\AppointmentController;
 use App\Http\Controllers\AppointmentType\AppointmentTypesController;
 use App\Http\Controllers\Auth\UserController;
+use App\Http\Controllers\Backoffice\Entry\EntryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/appointment-types',  [AppointmentTypesController::class, 'store'])
         ->middleware('isAllow:appointmentType.store');
 });
+
+
+Route::apiResource('/entries', EntryController::class);
+

@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleSeeder::class);
         $this->call(ActionSeeder::class);
         $this->call(ActionRoleSeeder::class);
+        $this->call(UserSeeder::class);
+        $this->call(StatusEntrySeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }
